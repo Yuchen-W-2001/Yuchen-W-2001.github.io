@@ -1,0 +1,167 @@
+
+
+/* ===== BASE ===== */
+body {
+    font-family: 'Share Tech Mono', monospace;
+    background: #000000;
+    color: #00ffcc;
+    overflow: hidden;
+    letter-spacing: 0.5px;
+}
+
+/* ===== HEADER ===== */
+h1, h2 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: #00ffcc;
+}
+
+h1 {
+    font-size: 30pt;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 14pt;
+    font-style: italic;
+    color: #00aa88;
+}
+
+/* ===== CONTAINER ===== */
+.outerContainer {
+    position: absolute;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    margin-top: 24px;
+    background: #000000;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 60px;
+    padding-top: 4em;
+    background: #000000;
+}
+
+/* ===== TEXT ===== */
+p {
+    font-size: 13pt;
+    line-height: 1.9em;
+    text-align: center;
+    color: #00ffcc;
+}
+
+/* ===== IMAGE ===== */
+img {
+    display: block;
+    width: 220px;
+    height: 160px;
+    object-fit: cover;
+    margin: 20px auto;
+    border: 1px solid #00ffcc;
+    filter: grayscale(100%);
+    transition: all 0.4s ease;
+}
+
+img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+/* ===== LINKS ===== */
+a {
+    font-weight: bold;
+    color: #00ffcc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+/* ===== CHOICES (重点评分项) ===== */
+.choice {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.choice a, .choice span {
+    display: inline-block;
+    font-size: 13pt;
+    padding: 8px 14px;
+    margin: 6px 0;
+    border: 1px solid #00ffcc;
+    color: #00ffcc;
+    transition: all 0.3s ease;
+}
+
+.choice a:hover {
+    background: #00ffcc;
+    color: #000000;
+    transform: scale(1.05);
+}
+
+/* ===== SYSTEM TEXT EFFECT ===== */
+p::before {
+    content: "> ";
+    color: #00aa88;
+}
+
+/* ===== END TEXT ===== */
+.end {
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    color: #00ffcc;
+}
+
+/* ===== TOP BAR ===== */
+.written-in-ink {
+    position: fixed;
+    width: 100%;
+    background: #000000;
+    color: #00ffcc;
+    text-align: center;
+    font-size: 9pt;
+    padding: 6px 0;
+    top: 0;
+}
+
+/* ===== CONTROL BAR ===== */
+#controls {
+    position: fixed;
+    right: 14px;
+    top: 4px;
+    font-size: 9pt;
+    color: #00ffcc;
+    background: #000000;
+}
+
+#controls [disabled] {
+    color: #005544;
+}
+
+/* ===== SCROLL FIX ===== */
+@media screen and (max-width: 980px) {
+    .outerContainer {
+        margin-top: 44px;
+    }
+}
+
+/* ===== OPTIONAL: TERMINAL GLOW ===== */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgba(0,255,204,0.05), transparent);
+    pointer-events: none;
+}
